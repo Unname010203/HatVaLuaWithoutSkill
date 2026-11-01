@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hạt & Lửa - Cà Phê Rang Xay Thủ Công</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <!-- Flame -->
+          <path d="M20 4C20 4 25 10 25 15C25 18 23 20 20 20C17 20 15 18 15 15C15 10 20 4 20 4Z" fill="#E65100"/>
+          <path d="M20 9C20 9 23 13 23 16C23 18 22 19 20 19C18 19 17 18 17 16C17 13 20 9 20 9Z" fill="#FFA726"/>
+          <!-- Coffee Bean -->
+          <ellipse cx="20" cy="27" rx="14" ry="10" transform="rotate(-15 20 27)" fill="#4A2511"/>
+          <path d="M12 25C15 23 18 31 28 29" stroke="#EFEBE9" stroke-width="2" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="brand-name">Hạt & Lửa</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reviews">Đánh giá</a></li>
+          <li><a href="#reservation" class="btn-nav">Đặt bàn</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-badge">Thành lập năm 2021</div>
+        <h1 class="hero-title">Hạt & Lửa</h1>
+        <p class="hero-tagline">"Rang từng mẻ nhỏ, uống từng ngụm chậm."</p>
+        
+        <div class="hero-illustration" aria-hidden="true">
+          <svg viewBox="0 0 320 200" class="hero-svg">
+            <defs>
+              <linearGradient id="warmFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#D84315"/>
+                <stop offset="50%" stop-color="#F57C00"/>
+                <stop offset="100%" stop-color="#FFD54F"/>
+              </linearGradient>
+              <linearGradient id="cupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F5EBE6"/>
+                <stop offset="100%" stop-color="#E0D2C7"/>
+              </linearGradient>
+            </defs>
+            <!-- Coffee Roaster Drum / Table Graphic -->
+            <ellipse cx="160" cy="170" rx="110" ry="20" fill="#E8DDD3"/>
+            <!-- Saucer -->
+            <ellipse cx="160" cy="155" rx="80" ry="14" fill="#D7CCC8"/>
+            <!-- Cup -->
+            <path d="M100 100 C100 150, 220 150, 220 100 Z" fill="url(#cupGrad)" stroke="#8D6E63" stroke-width="2"/>
+            <!-- Handle -->
+            <path d="M215 110 C240 110, 240 135, 215 140" fill="none" stroke="#8D6E63" stroke-width="6" stroke-linecap="round"/>
+            <!-- Coffee Surface -->
+            <ellipse cx="160" cy="102" rx="55" ry="12" fill="#3E2723"/>
+            <ellipse cx="160" cy="102" rx="42" ry="8" fill="#4E342E"/>
+            <!-- Coffee Bean on plate -->
+            <ellipse cx="85" cy="153" rx="12" ry="8" transform="rotate(-20 85 153)" fill="#4E342E"/>
+            <path d="M78 153 C83 150, 87 156, 92 153" stroke="#D7CCC8" stroke-width="1.5" fill="none"/>
+            <ellipse cx="235" cy="156" rx="10" ry="7" transform="rotate(30 235 156)" fill="#3E2723"/>
+            <!-- Steam rising with flame shape -->
+            <path class="steam steam-1" d="M145 85 C140 70, 155 60, 145 45" fill="none" stroke="#D7CCC8" stroke-width="3" stroke-linecap="round"/>
+            <path class="steam steam-2" d="M160 82 C165 65, 150 55, 160 38" fill="none" stroke="#D7CCC8" stroke-width="3.5" stroke-linecap="round"/>
+            <path class="steam steam-3" d="M175 85 C170 68, 185 58, 175 45" fill="none" stroke="#D7CCC8" stroke-width="3" stroke-linecap="round"/>
+            <!-- Fire accent -->
+            <path d="M160 12 C160 12, 168 22, 168 28 C168 32, 164 35, 160 35 C156 35, 152 32, 152 28 C152 22, 160 12, 160 12Z" fill="url(#warmFlame)"/>
+          </svg>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#reservation" class="btn btn-primary">Đặt bàn ngay</a>
+          <a href="#menu" class="btn btn-secondary">Xem menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Bar -->
+    <section class="info-bar">
+      <div class="container info-grid">
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <strong>Địa chỉ</strong>
+            <span>12 Hẻm Lò Rang (địa chỉ giả lập)</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <strong>Giờ mở cửa</strong>
+            <span>7:00 – 22:00 mỗi ngày</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <strong>Điện thoại</strong>
+            <a href="tel:0900000000">0900 000 000</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <strong>Năm thành lập</strong>
+            <span>2021</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Giới thiệu</h2>
+          <div class="section-divider" aria-hidden="true">
+            <span></span>
+            <svg viewBox="0 0 20 20" width="20" height="20">
+              <ellipse cx="10" cy="10" rx="8" ry="5.5" transform="rotate(-30 10 10)" fill="#795548"/>
+              <path d="M6 9C8 8 12 12 14 11" stroke="#FFF" stroke-width="1.2" fill="none"/>
+            </svg>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <p class="about-paragraph">Quán rang cà phê tại chỗ mỗi sáng bằng máy rang 5 kg, hạt lấy từ các nông trại nhỏ ở cao nguyên.</p>
+          <p class="about-paragraph">Quán có khu học tập yên tĩnh, ổ cắm ở mọi bàn và Wi-Fi miễn phí.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Menu</h2>
+          <div class="section-divider" aria-hidden="true">
+            <span></span>
+            <svg viewBox="0 0 20 20" width="20" height="20">
+              <ellipse cx="10" cy="10" rx="8" ry="5.5" transform="rotate(-30 10 10)" fill="#795548"/>
+              <path d="M6 9C8 8 12 12 14 11" stroke="#FFF" stroke-width="1.2" fill="none"/>
+            </svg>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="menu-grid">
+          <!-- Item 1 -->
+          <article class="menu-card">
+            <div class="menu-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40">
+                <!-- Iced Black Coffee -->
+                <rect x="14" y="10" width="20" height="28" rx="3" fill="#2E1C14"/>
+                <rect x="16" y="12" width="16" height="24" rx="2" fill="#1A0F0A"/>
+                <!-- Ice cubes -->
+                <rect x="18" y="15" width="6" height="6" rx="1" fill="#FFFFFF" opacity="0.3"/>
+                <rect x="23" y="23" width="6" height="6" rx="1" fill="#FFFFFF" opacity="0.25"/>
+                <!-- Glass outline -->
+                <rect x="14" y="10" width="20" height="28" rx="3" fill="none" stroke="#8D6E63" stroke-width="2"/>
+                <line x1="28" y1="6" x2="21" y2="28" stroke="#D7CCC8" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="menu-item-details">
+              <div class="menu-item-head">
+                <h3 class="menu-item-name">Cà phê đen đá</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">29.000đ</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="menu-card">
+            <div class="menu-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40">
+                <!-- Milk Coffee layer -->
+                <rect x="14" y="10" width="20" height="28" rx="3" fill="#6D4C41"/>
+                <rect x="14" y="28" width="20" height="10" rx="2" fill="#EFEBE9"/>
+                <rect x="14" y="10" width="20" height="28" rx="3" fill="none" stroke="#8D6E63" stroke-width="2"/>
+                <!-- Ice cubes -->
+                <rect x="19" y="14" width="6" height="6" rx="1" fill="#FFFFFF" opacity="0.4"/>
+                <rect x="21" y="21" width="5" height="5" rx="1" fill="#FFFFFF" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="menu-item-details">
+              <div class="menu-item-head">
+                <h3 class="menu-item-name">Cà phê sữa</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">32.000đ</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="menu-card">
+            <div class="menu-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40">
+                <!-- Bac Xiu 3 layers -->
+                <rect x="14" y="10" width="20" height="28" rx="3" fill="#D7CCC8"/>
+                <rect x="14" y="26" width="20" height="12" rx="2" fill="#FFF8E7"/>
+                <rect x="14" y="18" width="20" height="8" fill="#4E342E"/>
+                <rect x="14" y="10" width="20" height="28" rx="3" fill="none" stroke="#8D6E63" stroke-width="2"/>
+                <line x1="22" y1="6" x2="22" y2="34" stroke="#BCAAA4" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="menu-item-details">
+              <div class="menu-item-head">
+                <h3 class="menu-item-name">Bạc xỉu</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">35.000đ</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="menu-card">
+            <div class="menu-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40">
+                <!-- Cold brew glass -->
+                <path d="M15 12 L17 38 L31 38 L33 12 Z" fill="#3E2723"/>
+                <path d="M15 12 L17 38 L31 38 L33 12 Z" fill="none" stroke="#8D6E63" stroke-width="2"/>
+                <!-- Orange slice -->
+                <circle cx="28" cy="12" r="7" fill="#FF9800"/>
+                <circle cx="28" cy="12" r="5" fill="#FFE082"/>
+                <line x1="28" y1="7" x2="28" y2="17" stroke="#FF9800" stroke-width="1"/>
+                <line x1="23" y1="12" x2="33" y2="12" stroke="#FF9800" stroke-width="1"/>
+                <!-- Lemongrass stalk -->
+                <line x1="20" y1="36" x2="16" y2="6" stroke="#81C784" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="menu-item-details">
+              <div class="menu-item-head">
+                <h3 class="menu-item-name">Cold brew cam sả</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">45.000đ</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5 -->
+          <article class="menu-card">
+            <div class="menu-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40">
+                <!-- Latte Cup with art -->
+                <path d="M10 18 C10 32, 34 32, 34 18 Z" fill="#D7CCC8" stroke="#8D6E63" stroke-width="2"/>
+                <path d="M34 20 C40 20, 40 28, 34 28" fill="none" stroke="#8D6E63" stroke-width="2.5"/>
+                <!-- Surface -->
+                <ellipse cx="22" cy="18" rx="12" ry="4" fill="#8D6E63"/>
+                <!-- Latte leaf -->
+                <path d="M22 16 C20 17, 20 19, 22 20 C24 19, 24 17, 22 16 Z" fill="#FFF"/>
+                <!-- Saucer -->
+                <line x1="8" y1="33" x2="36" y2="33" stroke="#8D6E63" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="menu-item-details">
+              <div class="menu-item-head">
+                <h3 class="menu-item-name">Latte hạt phỉ</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">49.000đ</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6 -->
+          <article class="menu-card">
+            <div class="menu-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40">
+                <!-- Garlic Bread Slice -->
+                <ellipse cx="24" cy="24" rx="16" ry="11" fill="#FFB74D" stroke="#E65100" stroke-width="2"/>
+                <ellipse cx="24" cy="24" rx="12" ry="8" fill="#FFE082"/>
+                <!-- Butter & herbs dots -->
+                <circle cx="21" cy="22" r="1.5" fill="#4CAF50"/>
+                <circle cx="26" cy="25" r="1.5" fill="#4CAF50"/>
+                <circle cx="25" cy="21" r="1.5" fill="#4CAF50"/>
+                <circle cx="19" cy="26" r="1" fill="#4CAF50"/>
+                <!-- Garlic clove accent -->
+                <path d="M29 27 C30 25, 33 26, 31 29 C29 29, 28 28, 29 27 Z" fill="#FFF9C4"/>
+              </svg>
+            </div>
+            <div class="menu-item-details">
+              <div class="menu-item-head">
+                <h3 class="menu-item-name">Bánh mì bơ tỏi</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">25.000đ</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Đánh giá của khách</h2>
+          <div class="section-divider" aria-hidden="true">
+            <span></span>
+            <svg viewBox="0 0 20 20" width="20" height="20">
+              <ellipse cx="10" cy="10" rx="8" ry="5.5" transform="rotate(-30 10 10)" fill="#795548"/>
+              <path d="M6 9C8 8 12 12 14 11" stroke="#FFF" stroke-width="1.2" fill="none"/>
+            </svg>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <article class="review-card">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <blockquote class="review-text">
+              Chỗ ngồi yên tĩnh, ngồi học cả buổi vẫn thoải mái.
+            </blockquote>
+            <div class="review-author">
+              <div class="author-avatar" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="40" height="40">
+                  <circle cx="20" cy="20" r="19" fill="#EFEBE9" stroke="#D7CCC8" stroke-width="2"/>
+                  <circle cx="20" cy="16" r="6" fill="#8D6E63"/>
+                  <path d="M10 32 C10 25, 30 25, 30 32" fill="#8D6E63"/>
+                </svg>
+              </div>
+              <div class="author-info">
+                <cite class="author-name">Minh Anh</cite>
+                <span class="author-role">sinh viên</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <blockquote class="review-text">
+              Cold brew cam sả rất thơm, không bị gắt.
+            </blockquote>
+            <div class="review-author">
+              <div class="author-avatar" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="40" height="40">
+                  <circle cx="20" cy="20" r="19" fill="#EFEBE9" stroke="#D7CCC8" stroke-width="2"/>
+                  <circle cx="20" cy="16" r="6" fill="#6D4C41"/>
+                  <path d="M10 32 C10 25, 30 25, 30 32" fill="#6D4C41"/>
+                </svg>
+              </div>
+              <div class="author-info">
+                <cite class="author-name">Quốc Bảo</cite>
+                <span class="author-role">lập trình viên</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card">
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <blockquote class="review-text">
+              Mùi rang cà phê buổi sáng làm mình muốn ghé mỗi ngày.
+            </blockquote>
+            <div class="review-author">
+              <div class="author-avatar" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="40" height="40">
+                  <circle cx="20" cy="20" r="19" fill="#EFEBE9" stroke="#D7CCC8" stroke-width="2"/>
+                  <circle cx="20" cy="16" r="6" fill="#A1887F"/>
+                  <path d="M10 32 C10 25, 30 25, 30 32" fill="#A1887F"/>
+                </svg>
+              </div>
+              <div class="author-info">
+                <cite class="author-name">Thu Hà</cite>
+                <span class="author-role">nhân viên thiết kế</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation-section">
+      <div class="container reservation-container">
+        <div class="section-header">
+          <h2 class="section-title">Form Đặt Bàn</h2>
+          <div class="section-divider" aria-hidden="true">
+            <span></span>
+            <svg viewBox="0 0 20 20" width="20" height="20">
+              <ellipse cx="10" cy="10" rx="8" ry="5.5" transform="rotate(-30 10 10)" fill="#795548"/>
+              <path d="M6 9C8 8 12 12 14 11" stroke="#FFF" stroke-width="1.2" fill="none"/>
+            </svg>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="form-grid">
+              <!-- Họ tên -->
+              <div class="form-group">
+                <label for="fullName">Họ tên <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="Nhập họ và tên của bạn" required>
+                <span class="error-msg" id="fullNameError"></span>
+              </div>
+
+              <!-- Số điện thoại -->
+              <div class="form-group">
+                <label for="phone">Số điện thoại <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="Ví dụ: 0900 000 000" required>
+                <span class="error-msg" id="phoneError"></span>
+              </div>
+
+              <!-- Ngày -->
+              <div class="form-group">
+                <label for="date">Ngày <span class="required">*</span></label>
+                <input type="date" id="date" name="date" required>
+                <span class="error-msg" id="dateError"></span>
+              </div>
+
+              <!-- Giờ -->
+              <div class="form-group">
+                <label for="time">Giờ <span class="required">*</span></label>
+                <input type="time" id="time" name="time" required>
+                <span class="error-msg" id="timeError"></span>
+              </div>
+
+              <!-- Số người (1-10) -->
+              <div class="form-group full-width">
+                <label for="guests">Số người (1–10) <span class="required">*</span></label>
+                <input type="number" id="guests" name="guests" min="1" max="10" placeholder="Từ 1 đến 10" required>
+                <span class="error-msg" id="guestsError"></span>
+              </div>
+
+              <!-- Ghi chú -->
+              <div class="form-group full-width">
+                <label for="notes">Ghi chú</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Yêu cầu thêm (nếu có)..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary btn-block">Nút gửi đặt bàn</button>
+            </div>
+          </form>
+
+          <!-- Success Alert Message -->
+          <div id="bookingResult" class="booking-result" style="display: none;" role="alert">
+            <div class="result-icon" aria-hidden="true">✓</div>
+            <h3>Đặt bàn thành công!</h3>
+            <p id="bookingSummary"></p>
+            <button type="button" id="btnBookAgain" class="btn btn-secondary">Đặt bàn khác</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-title">Hạt & Lửa</span>
+        <p class="footer-tagline">"Rang từng mẻ nhỏ, uống từng ngụm chậm."</p>
+      </div>
+
+      <div class="footer-info">
+        <p><strong>Địa chỉ:</strong> 12 Hẻm Lò Rang (địa chỉ giả lập)</p>
+        <p><strong>Giờ mở cửa:</strong> 7:00 – 22:00 mỗi ngày</p>
+        <p><strong>Điện thoại:</strong> 0900 000 000</p>
+        <p><strong>Năm thành lập:</strong> 2021</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2021 Hạt & Lửa. Cà phê rang xay thủ công.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
